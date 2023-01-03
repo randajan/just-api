@@ -1,6 +1,6 @@
 {
   "name": "@randajan/just-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create your own super simple api with middleware",
   "repository": "randajan/just-api",
   "type": "module",
