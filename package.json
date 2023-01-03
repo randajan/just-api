@@ -1,0 +1,37 @@
+{
+  "name": "@randajan/just-api",
+  "version": "0.0.2",
+  "description": "Create your own super simple api with middleware",
+  "repository": "randajan/just-api",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "set NODE_ENV=dev&& node ./index.js",
+    "build": "set NODE_ENV=prod&& node ./index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@randajan/simple-lib": "^2.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "database"
+  ],
+  "homepage": "https://github.com/randajan/ram-db",
+  "bugs": {
+    "url": "https://github.com/randajan/ram-db/issues"
+  },
+  "author": {
+    "name": "Jan Randa",
+    "email": "jnranda@gmail.com",
+    "url": "https://www.linkedin.com/in/randajan/"
+  }
+}
