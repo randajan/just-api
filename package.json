@@ -1,6 +1,6 @@
 {
   "name": "@randajan/just-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create your own super simple api with middleware",
   "repository": "randajan/just-api",
   "type": "module",
@@ -8,8 +8,8 @@
   "module": "dist/sync/index.js",
   "exports": {
     ".": "./dist/sync/index.js",
-    "./sync":"./dist/sync/index.js",
-    "./async":"./dist/async/index.js"
+    "./sync": "./dist/sync/index.js",
+    "./async": "./dist/async/index.js"
   },
   "scripts": {
     "start": "set NODE_ENV=dev&& node ./index.js",
