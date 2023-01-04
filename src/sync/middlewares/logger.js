@@ -1,4 +1,4 @@
-export const logger = (complete=false, title="")=>{
+export default (complete=false, title="")=>{
 
 	title = title ? " "+title : "";
 

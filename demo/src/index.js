@@ -5,7 +5,7 @@ import createInterface, {
     addContext,
     formatInput,
     toJSON
-} from "../../dist/index.js";
+} from "../../dist/async/index.js";
 
 
 
@@ -17,11 +17,12 @@ const api = createInterface([
     showError(),
     addContext({any:"thing"}),
     formatInput(({query})=>query),
-    ({request:{input}, context})=>{
+    async ({request:{input}, context})=>{
         return input.foo + " | " + context.any;
     }
 ]);
 
 
-console.log(api({query:{foo:"bar"}}));
+api({query:{foo:"bar"}}).then(res=>console.log("async", res));
+//console.log("sync", api({query:{foo:"bar"}}));
 //expected output - {"output":"bar | thing","time":{"start":"2023-01-03T02:02:00.723Z","end":"2023-01-03T02:02:00.723Z","duration":0}}

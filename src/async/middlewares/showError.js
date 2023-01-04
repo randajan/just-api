@@ -1,4 +1,4 @@
-export const showError = (all=false)=>{
+export default (all=false)=>{
 
   const format = err=>({
     msg:typeof err === "string" ? err : (err.msg || err.message),
@@ -6,8 +6,8 @@ export const showError = (all=false)=>{
     stack:err.stack
   })
 
-  return ({response, errors}, next)=>{
-    next();
+  return async ({response, errors}, next)=>{
+    await next();
     if (!errors.length) { return; }
     if (all) { response.errors = errors.map(format); }
     else { response.error = format(errors[0]); }

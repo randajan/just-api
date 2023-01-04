@@ -1,8 +1,8 @@
 
 
-export const showTime = (descriptor="time")=>{
+export default (descriptor="time")=>{
 
-    return ({response}, next)=>{
+    return async ({response}, next)=>{
 			let end;
 
       const enumerable = true; 
@@ -14,7 +14,7 @@ export const showTime = (descriptor="time")=>{
   
       Object.defineProperty(response, descriptor, {value:time, enumerable});
   
-      next();
+      await next();
 
 			end = new Date();
   
