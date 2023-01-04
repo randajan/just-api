@@ -27,7 +27,7 @@ import createInterface, {
     addContext,
     formatInput,
     toJSON
-} from "@randajan/just-api";
+} from "@randajan/just-api/sync";
 
 
 
