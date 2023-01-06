@@ -18,6 +18,7 @@ const api = createInterface([
     addContext({any:"thing"}),
     formatInput(({query})=>query),
     async ({request:{input}, context})=>{
+        throw {msg:"error", httpCode:407};
         return input.foo + " | " + context.any;
     }
 ]);

@@ -39,11 +39,23 @@ export const formatInput = val=>{
     if (v === "NaN") { return NaN; }
     const num = Number(val);
     return isNaN(num) ? val : num;
-    }
+}
   
 export const formatInputs = input=>{
     for (let i in input) {
         input[i] = formatInput(input[i]);
     }
     return input;
+}
+
+export const formatError = (err, stackTrace=false)=>{
+
+  const result = {
+    msg: typeof err !== "object" ? msg : (err.msg || err.message),
+    httpCode:(isNaN(Number(err.httpCode)) ? 500 : err.httpCode),
+  }
+
+  if (stackTrace) { result.stack = err.stack; }
+
+  return result;
 }
